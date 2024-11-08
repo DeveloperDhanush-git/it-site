@@ -1,0 +1,971 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff;
+    color: #284F9A;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    background: #284F9A;
+    background: -webkit-linear-gradient(to top, #284F9A, #173F6D);
+    background: linear-gradient(to top, #2B32B2, #173F6D);
+}
+
+.niet-logo {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.logo {
+    overflow: hidden;
+    flex: 2;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.navbar a {
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: inset 0 0 0 0 #fff;
+    color: #e6c068;
+    margin: 0 25px;
+    transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
+}
+
+.navbar a:hover {
+    font-size: 20px;
+    box-shadow: inset 500px 0 0 0 #e6c068;
+    color: white;
+}
+
+.navbar a.active {
+    color: #fff;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F9C501;
+    border: none;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 0 #fff;
+    margin: 0 25px;
+    transition: color .7s ease-in-out, box-shadow .7s ease-in-out;
+}
+
+.scroll-to-top:hover {
+    box-shadow: inset 200px 0 0 0 #fff;
+}
+
+.scroll-icon {
+    width: 50px;
+    height: auto;
+}
+
+.imagebanner {
+    padding-top: 5px;
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.score {
+    display: flex;
+    height: 300px;
+    background: #24C6DC;
+    background: -webkit-linear-gradient(to top, #514A9D, #24C6DC);
+    background: linear-gradient(to top, #514A9D, #24C6DC);
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.score img {
+    margin-right: 70px;
+}
+
+.score h1 {
+    font-size: 40px;
+    margin-right: 70px;
+}
+
+.score h1 span {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.scopesection {
+    display: flex;
+    width: 100%;
+}
+
+.text-container {
+    padding: 90px;
+}
+
+.text-container,
+.image-container {
+    height: 500px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.scopesection h1 {
+    font-size: 40px;
+    padding: 20px;
+    color: #284F9A;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+
+.scopesection p {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 25px;
+    color: black;
+}
+
+.scopesection img {
+    height: 500px;
+    width: 100%;
+    display: block;
+}
+
+.container {
+    margin-top: 5px;
+    background: #1488CC;
+    background: -webkit-linear-gradient(to bottom, #2B32B2, #1488CC);
+    background: linear-gradient(to top, #2B32B2, #1488CC);
+    border: 5px solid #fff;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vision,
+.mission {
+    width: 45%;
+    padding: 20px;
+}
+
+.vision h1,
+.mission h1 {
+    font-size: 40px;
+    padding: 20px;
+    color: #F9C501;
+    text-decoration: underline;
+    text-decoration-color: #F9C501;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+.vision p {
+    font-size: 25px;
+    color: #fff;
+    padding: 20px;
+}
+
+.mission ul {
+    padding: 0;
+}
+
+.mission ul li {
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.mission ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+.vision,
+.mission {
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+.faq {
+    padding: 20px 12%;
+    text-align: center;
+    font-size: 18px;
+    background-color: #F9C501;
+}
+
+.faq h2 {
+    font-weight: 500;
+    font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: #284F9A;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+.accord {
+    margin: 60px auto;
+    width: 100%;
+}
+
+.accord li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accord li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fff;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accord .content {
+    background-color: #fff;
+    text-align: left;
+    padding: 0px 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accord .content p {
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+}
+
+.accord input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accord input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.faq .sign {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small {
+    font-size: 30px;
+}
+
+.learnings {
+    margin-top: 40px;
+    background-image: url('enhance.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 880px;
+}
+
+.learnings .headname {
+    padding: 30px;
+    text-align: center;
+    color: #fffc00;
+    text-decoration: underline;
+    text-decoration-color: #F9C501;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+    display: block;
+}
+
+.learningcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.learningcontent .labs {
+    padding: 10px;
+    background-color: #fff;
+    height: 700px;
+    width: 30%;
+    color: black;
+    border: 3px solid #284F9A;
+    border-radius: 5px;
+}
+
+.learningcontent .labs h1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+.learningcontent .labs ul {
+    padding: 10px;
+}
+
+.learningcontent .labs ul li {
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: black;
+    overflow: hidden;
+}
+
+.learningcontent .labs ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+/* coes */
+.learningcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.learningcontent .coes {
+    padding: 10px;
+    background-color: #fff;
+    height: 700px;
+    width: 30%;
+    color: black;
+    border: 3px solid #284F9A;
+    border-radius: 5px;
+}
+
+.learningcontent .coes h1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+.learningcontent .coes ul {
+    padding: 10px;
+}
+
+.learningcontent .coes ul li {
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: black;
+    overflow: hidden;
+}
+
+.learningcontent .coes ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+/* vac */
+
+.learningcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.learningcontent .vac {
+    padding: 10px;
+    background-color: #fff;
+    height: 700px;
+    width: 30%;
+    color: black;
+    border: 3px solid #284F9A;
+    border-radius: 5px;
+}
+
+.learningcontent .vac h1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+.learningcontent .vac ul {
+    padding: 10px;
+}
+
+.learningcontent .vac ul li {
+    font-size: 20px;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: black;
+    overflow: hidden;
+}
+
+.learningcontent .vac ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: black;
+}
+
+.images {
+    padding: 10px;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #284F9A;
+}
+
+.hod {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hod h1 {
+    font-size: 40px;
+    padding: 30px;
+    color: #284F9A;
+    text-decoration: underline;
+    text-decoration-color: #F9C501;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+.hod img {
+    height: 500px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.hod h2 {
+    font-size: 40px;
+    padding: 10px;
+    color: #284F9A;
+}
+
+.hod p {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(86, 84, 84);
+}
+
+/* faculty */
+
+.faculty-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.professor-head h1 {
+    font-size: 32px;
+    color: #284F9A;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #F9C501;
+    display: inline-block;
+}
+
+
+.faculty-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.faculty-card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 430px;
+    text-align: center;
+}
+
+.faculty-card img {
+    width: 300px;
+    height: 320px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.faculty-card h3 {
+    font-size: 18px;
+    color: #284F9A;
+    margin-bottom: 5px;
+}
+
+.faculty-card p {
+    font-size: 14px;
+    color: #333333;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-color: #f0f4f7;
+    padding: 20px 0;
+}
+
+.carousel-container h1 {
+    font-family: Arial, sans-serif;
+    color: #284F9A;
+    margin-bottom: 15px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-track-container {
+    width: 90%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    margin: 0 15px;
+    list-style: none;
+}
+
+.carousel-slide img {
+    width: 350px;
+    height: 280px;
+    border-radius: 8px;
+}
+
+.carousel-caption {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: left;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.carousel-caption h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.carousel-caption p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.left {
+    left: 15px;
+}
+
+.carousel-button.right {
+    right: 15px;
+}
+
+.carousel-button:hover {
+    background-color: #ffeb3b;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 40px;
+    padding: 30px;
+    color: #284F9A;
+    text-decoration: underline;
+    text-decoration-color: #F9C501;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+.hodnum,
+.facnum {
+    color: rgb(38, 38, 38);
+    padding: 20px;
+}
+
+footer {
+    background: #284F9A;
+    background: -webkit-linear-gradient(to top, #284F9A, #173F6D);
+    background: linear-gradient(to top, #2B32B2, #173F6D);
+    color: #fff;
+    padding: 40px;
+}
+
+footer h1 {
+    font-size: 30px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+}
+
+.social {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.social {
+    gap: 10px;
+}
+
+.social i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #fff;
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    border-radius: 50%;
+    color: #284F9A;
+    font-size: 20px;
+    margin: 0 7px;
+    transition: all 0.6s ease-in-out;
+}
+
+.social i:hover {
+    transform: translateY(-10px);
+}
+
+
+/* media query */
+
+
+@media (max-width: 1400px) {
+    .navbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .score {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .score img,
+    .score h1 {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .score h1 {
+        font-size: 24px;
+    }
+
+    .score h1 span {
+        font-size: 16px;
+    }
+
+    .scopesection {
+        flex-direction: column;
+    }
+
+    .text-container,
+    .image-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .vision,
+    .mission {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .vision h1,
+    .mission h1 {
+        font-size: 24px;
+    }
+
+    .vision p {
+        font-size: 16px;
+    }
+
+    .mission ul li {
+        font-size: 16px;
+    }
+
+    .learningcontent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learningcontent .labs,
+    .learningcontent .coes,
+    .learningcontent .vac {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hod h1{
+        font-size: 30px;
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    .hod h2 {
+        font-size: 25px;
+        padding: 10px;
+    }
+    
+    .hod p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .professor-head h1{
+        font-size: 25px;
+    }
+    .contact h1{
+        font-size: 30px;
+    }
+    footer h1{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+
+    .score {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .score img,
+    .score h1 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .score h1 {
+        font-size: 28px;
+    }
+
+    .score h1 span {
+        font-size: 18px;
+    }
+
+    .scopesection {
+        flex-direction: column;
+    }
+
+    .text-container,
+    .image-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .vision,
+    .mission {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .vision h1,
+    .mission h1 {
+        font-size: 28px;
+    }
+
+    .vision p {
+        font-size: 18px;
+    }
+
+    .mission ul li {
+        font-size: 18px;
+    }
+
+    .learningcontent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learningcontent .labs,
+    .learningcontent .coes,
+    .learningcontent .vac {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hod h1{
+        font-size: 30px;
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    .hod h2 {
+        font-size: 25px;
+        padding: 10px;
+    }
+    
+    .hod p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .professor-head h1{
+        font-size: 25px;
+    }
+    .contact h1{
+        font-size: 30px;
+    }
+    footer h1{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+
+    .score {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .score img,
+    .score h1 {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .score h1 {
+        font-size: 30px;
+    }
+
+    .score h1 span {
+        font-size: 20px;
+    }
+
+
+    .scopesection {
+        flex-direction: column;
+    }
+
+    .text-container,
+    .image-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+
+    .vision,
+    .mission {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .vision h1,
+    .mission h1 {
+        font-size: 30px;
+    }
+
+    .vision p {
+        font-size: 18px;
+    }
+
+    .mission ul li {
+        font-size: 18px;
+    }
+
+    .learningcontent .labs,
+    .learningcontent .coes,
+    .learningcontent .vac {
+        width: 45%;
+    }
+}

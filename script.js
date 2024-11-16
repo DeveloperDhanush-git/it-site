@@ -38,24 +38,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const sr = ScrollReveal({
-        duration: 300,
+        duration: 100,
         distance: '30px',
         reset: true
     });
 
-    sr.reveal('.logo', { delay: 230, origin: 'left' });
-    sr.reveal('.navbar', { delay: 230, origin: 'top' });
-    sr.reveal('.imagebanner', { delay: 230, origin: 'top' });
-    sr.reveal('.score', { delay: 230, origin: 'right' });
-    sr.reveal('.text-container', { delay: 230, origin: 'left' });
-    sr.reveal('.image-container', { delay: 230, origin: 'right' });
-    sr.reveal('.container', { delay: 230, origin: 'right' });
-    sr.reveal('.faq', { delay: 230, origin: 'right' });
-    sr.reveal('.learnings', { delay: 230, origin: 'right' });
-    sr.reveal('.images', { delay: 230, origin: 'right' });
-    sr.reveal('.carousel-container', { delay: 230, origin: 'right' });
-    sr.reveal('.contact', { delay: 230, origin: 'right' });
-    sr.reveal('footer', { delay: 230, origin: 'right' });
+    sr.reveal('.logo', { delay: 150, origin: 'left' });
+    sr.reveal('.navbar', { delay: 150, origin: 'top' });
+    sr.reveal('.imagebanner', { delay: 150, origin: 'top' });
+    sr.reveal('.score', { delay: 150, origin: 'right' });
+    sr.reveal('.text-container', { delay: 150, origin: 'left' });
+    sr.reveal('.image-container', { delay: 150, origin: 'right' });
+    sr.reveal('.container', { delay: 150, origin: 'right' });
+    sr.reveal('.faq', { delay: 150, origin: 'right' });
+    sr.reveal('.learnings', { delay: 150, origin: 'right' });
+    sr.reveal('.images', { delay: 150, origin: 'right' });
+    sr.reveal('.carousel-container', { delay: 150, origin: 'right' });
+    sr.reveal('.contact', { delay: 150, origin: 'right' });
+    sr.reveal('footer', { delay: 150, origin: 'right' });
 
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(track.children);

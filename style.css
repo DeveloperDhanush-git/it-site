@@ -41,7 +41,10 @@ header {
     overflow: hidden;
     flex: 2;
 }
-
+.logo img{
+    height: 90px;
+    width: 100%;
+}
 .navbar {
     display: flex;
     align-items: center;

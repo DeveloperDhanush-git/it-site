@@ -75,7 +75,7 @@ header {
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
     background-color: #F9C501;
     border: none;
     cursor: pointer;
@@ -105,8 +105,9 @@ header {
 
 .banner {
     width: 100%;
+    max-width: 100%;
     height: 500px;
-    display: flex;
+    display: block;
 }
 
 .score {
@@ -509,6 +510,8 @@ input[type="radio"] {
     height: 500px;
     width: 400px;
     margin-bottom: 40px;
+}
+.hod img:hover{
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
@@ -740,6 +743,7 @@ footer h1 {
     .navbar {
         display: none;
     }
+    
 }
 
 @media only screen and (max-width: 480px) {
@@ -750,7 +754,12 @@ footer h1 {
         text-align: center;
     }
 
-    .score img,
+    .score img{
+        height: 150px;
+        width: 150px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
     .score h1 {
         margin-right: 0;
         margin-bottom: 15px;
@@ -773,7 +782,12 @@ footer h1 {
         width: 100%;
         padding: 10px;
     }
-
+    .text-container h1{
+        font-size: 27px;
+    }
+    .text-container p{
+        font-size: 20px;
+    }
     .vision,
     .mission {
         width: 100%;
@@ -793,6 +807,11 @@ footer h1 {
     .mission ul li {
         font-size: 16px;
     }
+    .faq h2 {
+        font-weight: 500;
+        font-size: 24px;
+    }
+    
 
     .learningcontent {
         flex-direction: column;
@@ -805,8 +824,21 @@ footer h1 {
         width: 100%;
         margin-bottom: 20px;
     }
+    .headname{
+        font-size: 27px;
+    }
+    .learningcontent .labs h1,
+    .learningcontent .coes h1,
+    .learningcontent .vac h1{
+        font-size: 23px;
+    }
+    .learningcontent .labs ul li,
+    .learningcontent .coes ul li,
+    .learningcontent .vac ul li{
+        font-size: 20px;
+    }
     .hod h1{
-        font-size: 30px;
+        font-size: 23px;
         padding: 10px;
         padding-bottom: 30px;
     }
@@ -819,15 +851,28 @@ footer h1 {
         font-size: 20px;
         font-weight: 400;
     }
+    .hod img:hover{
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    }
     .professor-head h1{
-        font-size: 25px;
+        font-size: 24px;
     }
     .contact h1{
-        font-size: 30px;
+        font-size: 27px;
+    }
+    .scroll-to-top{
+        height: 60px;
+        width: 60px;
+    }
+    .scroll-icon{
+        height: 40px;
+        width: 40px;
     }
     footer h1{
         font-size: 20px;
     }
+    
 }
 
 
@@ -839,18 +884,23 @@ footer h1 {
         text-align: center;
     }
 
-    .score img,
+    .score img{
+        height: 150px;
+        width: 150px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
     .score h1 {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .score h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .score h1 span {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .scopesection {
@@ -860,28 +910,38 @@ footer h1 {
     .text-container,
     .image-container {
         width: 100%;
-        padding: 15px;
+        padding: 10px;
     }
-
+    .text-container h1{
+        font-size: 29px;
+    }
+    .text-container p{
+        font-size: 23px;
+    }
     .vision,
     .mission {
         width: 100%;
-        padding: 15px;
-        margin-bottom: 20px;
+        padding: 10px;
+        margin-bottom: 15px;
     }
 
     .vision h1,
     .mission h1 {
-        font-size: 28px;
+        font-size: 27px;
     }
 
     .vision p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .mission ul li {
-        font-size: 18px;
+        font-size: 20px;
     }
+    .faq h2 {
+        font-weight: 500;
+        font-size: 27px;
+    }
+    
 
     .learningcontent {
         flex-direction: column;
@@ -894,28 +954,53 @@ footer h1 {
         width: 100%;
         margin-bottom: 20px;
     }
-    .hod h1{
+    .headname{
         font-size: 30px;
+    }
+    .learningcontent .labs h1,
+    .learningcontent .coes h1,
+    .learningcontent .vac h1{
+        font-size: 27px;
+    }
+    .learningcontent .labs ul li,
+    .learningcontent .coes ul li,
+    .learningcontent .vac ul li{
+        font-size: 23px;
+    }
+    .hod h1{
+        font-size: 26px;
         padding: 10px;
         padding-bottom: 30px;
     }
     .hod h2 {
-        font-size: 25px;
+        font-size: 26px;
         padding: 10px;
     }
     
     .hod p {
-        font-size: 20px;
+        font-size: 23px;
         font-weight: 400;
     }
+    .hod img:hover{
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    }
     .professor-head h1{
-        font-size: 25px;
+        font-size: 27px;
     }
     .contact h1{
-        font-size: 30px;
+        font-size: 29px;
+    }
+    .scroll-to-top{
+        height: 60px;
+        width: 60px;
+    }
+    .scroll-icon{
+        height: 40px;
+        width: 40px;
     }
     footer h1{
-        font-size: 20px;
+        font-size: 27px;
     }
 }
 
@@ -953,7 +1038,6 @@ footer h1 {
         padding: 20px;
     }
 
-
     .vision,
     .mission {
         width: 100%;
@@ -973,10 +1057,18 @@ footer h1 {
     .mission ul li {
         font-size: 18px;
     }
-
+    .faq h2 {
+        font-weight: 500;
+        font-size: 40px;
+    }
     .learningcontent .labs,
     .learningcontent .coes,
     .learningcontent .vac {
         width: 45%;
+    }
+    .hod h1{
+        font-size: 30px;
+        padding: 10px;
+        padding-bottom: 30px;
     }
 }

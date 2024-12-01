@@ -912,8 +912,8 @@ footer h1 {
     
     header:before,
     header:after {
-        width: 80px;
-        height: 80px;
+        width: 170px;
+        height: 140px;
         border-radius: 80px;
     }
 

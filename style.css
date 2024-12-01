@@ -14,6 +14,35 @@ body {
     width: 100%;
 }
 
+.tour {
+    position: relative;
+    text-align: right;
+    margin: 10px;
+}
+
+.tour button {
+    background-color: #f6b417;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tour button a {
+    text-decoration: none;
+    color: black;
+}
+
+.tour button:hover {
+    background-color: #e5a814;
+    cursor: pointer;
+}
+
+/* General Styling */
 header {
     position: relative;
     top: 0;
@@ -24,11 +53,10 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 5px 5%;
-    background: #284F9A;
-    background: -webkit-linear-gradient(to top, #284F9A, #173F6D);
     background: linear-gradient(to top, #2B32B2, #173F6D);
 }
 
+/* NIET Logo Styling */
 .niet-logo {
     display: flex;
     overflow: hidden;
@@ -37,14 +65,18 @@ header {
     padding: 10px;
 }
 
+/* NGI Logo Styling */
 .logo {
     overflow: hidden;
     flex: 2;
 }
-.logo img{
+
+.logo img {
     height: 90px;
     width: 100%;
 }
+
+/* Navbar Styling */
 .navbar {
     display: flex;
     align-items: center;
@@ -57,20 +89,143 @@ header {
     font-size: 18px;
     font-weight: 500;
     box-shadow: inset 0 0 0 0 #fff;
-    color: #e6c068;
+    color: #fff;
     margin: 0 25px;
     transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
 }
 
 .navbar a:hover {
-    font-size: 20px;
-    box-shadow: inset 500px 0 0 0 #e6c068;
-    color: white;
+    overflow: hidden;
+    background-color: #f6b417;
+    color: black;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Active Navbar Link */
 .navbar a.active {
     color: #fff;
 }
+
+/* Hover Animation Effect for Header */
+header {
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header::before,
+header::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+}
+
+header:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+}
+
+/* Keyframes for Hover Animation */
+@keyframes clockwise {
+    0% {
+        top: -5px;
+        left: 0;
+    }
+
+    12% {
+        top: -2px;
+        left: 2px;
+    }
+
+    25% {
+        top: 0;
+        left: 5px;
+    }
+
+    37% {
+        top: 2px;
+        left: 2px;
+    }
+
+    50% {
+        top: 5px;
+        left: 0;
+    }
+
+    62% {
+        top: 2px;
+        left: -2px;
+    }
+
+    75% {
+        top: 0;
+        left: -5px;
+    }
+
+    87% {
+        top: -2px;
+        left: -2px;
+    }
+
+    100% {
+        top: -5px;
+        left: 0;
+    }
+}
+
+@keyframes counterclockwise {
+    0% {
+        top: -5px;
+        right: 0;
+    }
+
+    12% {
+        top: -2px;
+        right: 2px;
+    }
+
+    25% {
+        top: 0;
+        right: 5px;
+    }
+
+    37% {
+        top: 2px;
+        right: 2px;
+    }
+
+    50% {
+        top: 5px;
+        right: 0;
+    }
+
+    62% {
+        top: 2px;
+        right: -2px;
+    }
+
+    75% {
+        top: 0;
+        right: -5px;
+    }
+
+    87% {
+        top: -2px;
+        right: -2px;
+    }
+
+    100% {
+        top: -5px;
+        right: 0;
+    }
+}
+
 
 .scroll-to-top {
     position: fixed;
@@ -511,7 +666,8 @@ input[type="radio"] {
     width: 400px;
     margin-bottom: 40px;
 }
-.hod img:hover{
+
+.hod img:hover {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
@@ -743,10 +899,23 @@ footer h1 {
     .navbar {
         display: none;
     }
-    
+
 }
 
 @media only screen and (max-width: 480px) {
+
+    .navbar a {
+        font-size: 12px;
+        margin: 3px;
+    }
+
+    
+    header:before,
+    header:after {
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+    }
 
     .score {
         flex-direction: column;
@@ -754,12 +923,13 @@ footer h1 {
         text-align: center;
     }
 
-    .score img{
+    .score img {
         height: 150px;
         width: 150px;
         margin-right: 0;
         margin-bottom: 15px;
     }
+
     .score h1 {
         margin-right: 0;
         margin-bottom: 15px;
@@ -782,12 +952,15 @@ footer h1 {
         width: 100%;
         padding: 10px;
     }
-    .text-container h1{
+
+    .text-container h1 {
         font-size: 27px;
     }
-    .text-container p{
+
+    .text-container p {
         font-size: 20px;
     }
+
     .vision,
     .mission {
         width: 100%;
@@ -807,11 +980,12 @@ footer h1 {
     .mission ul li {
         font-size: 16px;
     }
+
     .faq h2 {
         font-weight: 500;
         font-size: 24px;
     }
-    
+
 
     .learningcontent {
         flex-direction: column;
@@ -824,72 +998,102 @@ footer h1 {
         width: 100%;
         margin-bottom: 20px;
     }
-    .headname{
+
+    .headname {
         font-size: 27px;
     }
+
     .learningcontent .labs h1,
     .learningcontent .coes h1,
-    .learningcontent .vac h1{
+    .learningcontent .vac h1 {
         font-size: 23px;
     }
+
     .learningcontent .labs ul li,
     .learningcontent .coes ul li,
-    .learningcontent .vac ul li{
+    .learningcontent .vac ul li {
         font-size: 20px;
     }
-    .hod h1{
+
+    .hod h1 {
         font-size: 23px;
         padding: 10px;
         padding-bottom: 30px;
     }
+
     .hod h2 {
         font-size: 25px;
         padding: 10px;
     }
-    
+
     .hod p {
         font-size: 20px;
         font-weight: 400;
     }
-    .hod img:hover{
+
+    .hod img:hover {
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     }
-    .professor-head h1{
+
+    .professor-head h1 {
         font-size: 24px;
     }
-    .contact h1{
+
+    .contact h1 {
         font-size: 27px;
     }
-    .scroll-to-top{
+
+    .scroll-to-top {
         height: 60px;
         width: 60px;
     }
-    .scroll-icon{
+
+    .scroll-icon {
         height: 40px;
         width: 40px;
     }
-    footer h1{
+
+    footer h1 {
         font-size: 20px;
     }
-    
+
 }
 
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
 
+    header {
+        padding: 10px 3%;
+    }
+
+    /* Navbar links font size and spacing for mobile */
+    .navbar a {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    /* Adjust animation ball sizes for mobile screens */
+    header::before,
+    header::after {
+        width: 180px;
+        height: 150px;
+        border-radius: 80px;
+    }
+
     .score {
         flex-direction: column;
         height: auto;
         text-align: center;
     }
 
-    .score img{
+    .score img {
         height: 150px;
         width: 150px;
         margin-right: 0;
         margin-bottom: 15px;
     }
+
     .score h1 {
         margin-right: 0;
         margin-bottom: 15px;
@@ -912,12 +1116,15 @@ footer h1 {
         width: 100%;
         padding: 10px;
     }
-    .text-container h1{
+
+    .text-container h1 {
         font-size: 29px;
     }
-    .text-container p{
+
+    .text-container p {
         font-size: 23px;
     }
+
     .vision,
     .mission {
         width: 100%;
@@ -937,11 +1144,12 @@ footer h1 {
     .mission ul li {
         font-size: 20px;
     }
+
     .faq h2 {
         font-weight: 500;
         font-size: 27px;
     }
-    
+
 
     .learningcontent {
         flex-direction: column;
@@ -954,52 +1162,63 @@ footer h1 {
         width: 100%;
         margin-bottom: 20px;
     }
-    .headname{
+
+    .headname {
         font-size: 30px;
     }
+
     .learningcontent .labs h1,
     .learningcontent .coes h1,
-    .learningcontent .vac h1{
+    .learningcontent .vac h1 {
         font-size: 27px;
     }
+
     .learningcontent .labs ul li,
     .learningcontent .coes ul li,
-    .learningcontent .vac ul li{
+    .learningcontent .vac ul li {
         font-size: 23px;
     }
-    .hod h1{
+
+    .hod h1 {
         font-size: 26px;
         padding: 10px;
         padding-bottom: 30px;
     }
+
     .hod h2 {
         font-size: 26px;
         padding: 10px;
     }
-    
+
     .hod p {
         font-size: 23px;
         font-weight: 400;
     }
-    .hod img:hover{
+
+    .hod img:hover {
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     }
-    .professor-head h1{
+
+    .professor-head h1 {
         font-size: 27px;
     }
-    .contact h1{
+
+    .contact h1 {
         font-size: 29px;
     }
-    .scroll-to-top{
+
+    .scroll-to-top {
         height: 60px;
         width: 60px;
     }
-    .scroll-icon{
+
+    .scroll-icon {
         height: 40px;
         width: 40px;
     }
-    footer h1{
+
+    footer h1 {
         font-size: 27px;
     }
 }
@@ -1057,16 +1276,19 @@ footer h1 {
     .mission ul li {
         font-size: 18px;
     }
+
     .faq h2 {
         font-weight: 500;
         font-size: 40px;
     }
+
     .learningcontent .labs,
     .learningcontent .coes,
     .learningcontent .vac {
         width: 45%;
     }
-    .hod h1{
+
+    .hod h1 {
         font-size: 30px;
         padding: 10px;
         padding-bottom: 30px;

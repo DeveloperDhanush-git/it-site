@@ -1,3 +1,32 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const cursor = document.getElementById("custom-cursor");
+
+    // Track mouse movement
+    document.addEventListener("mousemove", (e) => {
+        const scrollY = window.scrollY; // Get the current vertical scroll position
+        cursor.style.top = `${e.clientY + scrollY}px`; // Adjust cursor position based on scroll
+        cursor.style.left = `${e.clientX}px`; // Keep the cursor following horizontally
+
+        createSparkle(e.clientX, e.clientY + scrollY); // Pass adjusted Y position to sparkles
+    });
+
+    // Create sparkle effect
+    function createSparkle(x, y) {
+        const sparkle = document.createElement("div");
+        sparkle.classList.add("sparkle");
+        sparkle.style.top = `${y}px`;
+        sparkle.style.left = `${x}px`;
+
+        document.body.appendChild(sparkle);
+
+        // Remove sparkle after animation ends
+        sparkle.addEventListener("animationend", () => {
+            sparkle.remove();
+        });
+    }
+});
+
+
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 window.onscroll = function () {
